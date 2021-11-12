@@ -38,7 +38,15 @@ fun PlayerNameDialog(
     onDone: (Player, newName: String) -> Unit,
     onDismiss: () -> Unit
 ) {
-    // TODO: Not implemented
+    var playerName by rememberSaveable { mutableStateOf(player.name) }
+
+    Dialog(onDismissRequest = onDismiss) {
+        PlayerNameDialogContent(
+            name = playerName,
+            onNameChange = { playerName = it },
+            onDone = { onDone(player, playerName) }
+        )
+    }
 }
 
 @Composable
