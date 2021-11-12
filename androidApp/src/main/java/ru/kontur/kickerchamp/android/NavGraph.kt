@@ -4,8 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import ru.kontur.kickerchamp.HighScoreStore
-import ru.kontur.kickerchamp.MainScreenStore
+import org.koin.androidx.compose.get
 import ru.kontur.kickerchamp.android.MainDestinations.MAIN_ROUTE
 import ru.kontur.kickerchamp.android.highscores.HighScoresScreen
 import ru.kontur.kickerchamp.android.main.MainScreen
@@ -17,8 +16,6 @@ object MainDestinations {
 
 @Composable
 fun NavGraph(
-    mainScreenStore: MainScreenStore,
-    highScoreStore: HighScoreStore,
     startDestination: String = MAIN_ROUTE
 ) {
     val navController = rememberNavController()
@@ -28,12 +25,12 @@ fun NavGraph(
         startDestination = startDestination
     ) {
         composable(MAIN_ROUTE) {
-            MainScreen(mainScreenStore, onHighScoresClick = {
+            MainScreen(get(), onHighScoresClick = {
                 navController.navigate(MainDestinations.HIGH_SCORES_ROUTE)
             })
         }
         composable(MainDestinations.HIGH_SCORES_ROUTE) {
-            HighScoresScreen(highScoreStore, onBackClick = {
+            HighScoresScreen(get(), onBackClick = {
                 navController.popBackStack()
             })
         }

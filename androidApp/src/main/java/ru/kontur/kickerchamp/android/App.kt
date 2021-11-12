@@ -1,21 +1,21 @@
 package ru.kontur.kickerchamp.android
 
 import android.app.Application
-import ru.kontur.kickerchamp.HighScoreStore
-import ru.kontur.kickerchamp.MainScreenStore
-import ru.kontur.kickerchamp.db.Database
+import org.koin.core.context.startKoin
+import org.koin.dsl.module
 import ru.kontur.kickerchamp.db.DatabaseDriverFactory
+import ru.kontur.kickerchamp.di.sharedModule
 
 class App : Application() {
-    val mainScreenStore by lazy {
-        MainScreenStore(database)
+    override fun onCreate() {
+        super.onCreate()
+
+        startKoin {
+            modules(platformModule, sharedModule)
+        }
     }
 
-    val highScoreStore by lazy {
-        HighScoreStore(database)
-    }
-
-    private val database by lazy {
-        Database(DatabaseDriverFactory(this))
+    private val platformModule = module {
+        single { DatabaseDriverFactory(this@App) }
     }
 }

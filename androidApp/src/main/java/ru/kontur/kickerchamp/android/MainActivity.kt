@@ -11,10 +11,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             AppTheme {
-                NavGraph(
-                    (application as App).mainScreenStore,
-                    (application as App).highScoreStore
-                )
+                NavGraph()
             }
         }
     }
