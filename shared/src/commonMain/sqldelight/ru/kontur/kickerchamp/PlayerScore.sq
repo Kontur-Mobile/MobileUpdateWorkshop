@@ -1,0 +1,15 @@
+CREATE TABLE PlayerScore(
+    name TEXT NOT NULL PRIMARY KEY,
+    wins INTEGER AS Int NOT NULL,
+    goalsDiff INTEGER AS Int NOT NULL
+);
+
+insert:
+INSERT OR REPLACE INTO PlayerScore(name, wins, goalsDiff)
+VALUES ?;
+
+selectAll:
+SELECT * FROM PlayerScore;
+
+selectAllByRating:
+SELECT * FROM PlayerScore ORDER BY wins DESC, goalsDiff DESC;
