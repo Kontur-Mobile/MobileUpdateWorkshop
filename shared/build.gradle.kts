@@ -8,6 +8,7 @@ plugins {
 
 kotlin {
     android()
+    jvm("desktop")
 
     val iosTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget = when {
         System.getenv("SDK_NAME")?.startsWith("iphoneos") == true -> ::iosArm64
@@ -54,6 +55,12 @@ kotlin {
             }
         }
         val iosTest by getting
+
+        val desktopMain by getting {
+            dependencies {
+                implementation(libs.sqlDelightDesktop)
+            }
+        }
     }
 }
 

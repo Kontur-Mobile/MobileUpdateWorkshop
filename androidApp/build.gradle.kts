@@ -23,12 +23,13 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.2"
+        kotlinCompilerExtensionVersion = "1.0.4"
     }
 }
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":shared-ui"))
     // AndroidX
     implementation(libs.androidCoreKtx)
     implementation(libs.androidActivityKtx)
