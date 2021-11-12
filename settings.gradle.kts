@@ -3,12 +3,12 @@ pluginManagement {
         google()
         gradlePluginPortal()
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 
 rootProject.name = "KickerChamp"
-include(":androidApp")
-include(":shared")
+include(":androidApp", ":shared", ":shared-ui", ":desktop")
 
 enableFeaturePreview("VERSION_CATALOGS")
 
@@ -46,7 +46,11 @@ dependencyResolutionManagement {
             alias("sqlDelightRuntime").to("com.squareup.sqldelight:runtime:$sqlDelightVersion")
             alias("sqlDelightAndroid").to("com.squareup.sqldelight:android-driver:$sqlDelightVersion")
             alias("sqlDelightNative").to("com.squareup.sqldelight:native-driver:$sqlDelightVersion")
+            alias("sqlDelightDesktop").to("com.squareup.sqldelight:sqlite-driver:$sqlDelightVersion")
             alias("sqlDelightCoroutinesExtensions").to("com.squareup.sqldelight:coroutines-extensions:$sqlDelightVersion")
+
+            alias("odysseyCore").to("io.github.alexgladkov:odyssey-core:0.1.4")
+            alias("odysseyCompose").to("io.github.alexgladkov:odyssey-compose:0.1.4")
         }
     }
 }
