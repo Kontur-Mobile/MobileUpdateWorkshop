@@ -15,4 +15,36 @@ import ru.kontur.kickerchamp.RedDefender
 import ru.kontur.kickerchamp.RedForward
 import ru.kontur.kickerchamp.android.theme.AppTheme
 
-// TODO: Not implemented
+@Composable
+fun PlayersWidget(
+    players: List<Player>,
+    onAddOrEditPlayer: (Player) -> Unit
+) {
+    val alignments = listOf(
+        Alignment.TopStart,
+        Alignment.BottomStart,
+        Alignment.TopEnd,
+        Alignment.BottomEnd,
+    )
+
+    Box(
+        Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colors.background)
+    ) {
+        players.forEachIndexed { index, player ->
+            PlayerCard(player, onAddOrEditPlayer, Modifier.align(alignments[index]))
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PlayersWidgetPreview() {
+    AppTheme {
+        PlayersWidget(
+            listOf(BlueForward(), BlueDefender(), RedForward(), RedDefender()),
+            onAddOrEditPlayer = {}
+        )
+    }
+}
