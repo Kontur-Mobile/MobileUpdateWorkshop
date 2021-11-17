@@ -3,12 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		8D4620872746BE6200698E00 /* shared.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DEE15B12744DCE800708391 /* shared.xcframework */; };
+		8D4620882746BE6200698E00 /* shared.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DEE15B12744DCE800708391 /* shared.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8DEE15A12744D82E00708391 /* MainScreenState+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE158A2744D82E00708391 /* MainScreenState+Extensions.swift */; };
+		8DEE15A22744D82E00708391 /* HighScoreStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE158B2744D82E00708391 /* HighScoreStoreModel.swift */; };
+		8DEE15A32744D82E00708391 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE158C2744D82E00708391 /* Database.swift */; };
+		8DEE15A42744D82E00708391 /* MainScreenStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE158D2744D82E00708391 /* MainScreenStoreModel.swift */; };
+		8DEE15A52744D82E00708391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE158E2744D82E00708391 /* Assets.xcassets */; };
+		8DEE15A62744D82E00708391 /* TeamScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15922744D82E00708391 /* TeamScoreboardView.swift */; };
+		8DEE15A72744D82E00708391 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15932744D82E00708391 /* Ref.swift */; };
+		8DEE15A82744D82E00708391 /* StartedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15942744D82E00708391 /* StartedGameView.swift */; };
+		8DEE15A92744D82E00708391 /* PlayerEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15962744D82E00708391 /* PlayerEditView.swift */; };
+		8DEE15AA2744D82E00708391 /* NonStartedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15972744D82E00708391 /* NonStartedGameView.swift */; };
+		8DEE15AB2744D82E00708391 /* PlayersEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15982744D82E00708391 /* PlayersEditView.swift */; };
+		8DEE15AC2744D82E00708391 /* FinishedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE159A2744D82E00708391 /* FinishedGameView.swift */; };
+		8DEE15AD2744D82E00708391 /* HighScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE159C2744D82E00708391 /* HighScoresView.swift */; };
+		8DEE15AE2744D82E00708391 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE159D2744D82E00708391 /* ContentView.swift */; };
+		8DEE15AF2744D82E00708391 /* RandomNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE159F2744D82E00708391 /* RandomNameGenerator.swift */; };
+		8DEE15B02744D82E00708391 /* Player+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15A02744D82E00708391 /* Player+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,6 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8D4620882746BE6200698E00 /* shared.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -27,8 +45,24 @@
 /* Begin PBXFileReference section */
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DEE158A2744D82E00708391 /* MainScreenState+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainScreenState+Extensions.swift"; sourceTree = "<group>"; };
+		8DEE158B2744D82E00708391 /* HighScoreStoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreStoreModel.swift; sourceTree = "<group>"; };
+		8DEE158C2744D82E00708391 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		8DEE158D2744D82E00708391 /* MainScreenStoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenStoreModel.swift; sourceTree = "<group>"; };
+		8DEE158E2744D82E00708391 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DEE15922744D82E00708391 /* TeamScoreboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamScoreboardView.swift; sourceTree = "<group>"; };
+		8DEE15932744D82E00708391 /* Ref.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
+		8DEE15942744D82E00708391 /* StartedGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartedGameView.swift; sourceTree = "<group>"; };
+		8DEE15962744D82E00708391 /* PlayerEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerEditView.swift; sourceTree = "<group>"; };
+		8DEE15972744D82E00708391 /* NonStartedGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonStartedGameView.swift; sourceTree = "<group>"; };
+		8DEE15982744D82E00708391 /* PlayersEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersEditView.swift; sourceTree = "<group>"; };
+		8DEE159A2744D82E00708391 /* FinishedGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedGameView.swift; sourceTree = "<group>"; };
+		8DEE159C2744D82E00708391 /* HighScoresView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoresView.swift; sourceTree = "<group>"; };
+		8DEE159D2744D82E00708391 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8DEE159F2744D82E00708391 /* RandomNameGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNameGenerator.swift; sourceTree = "<group>"; };
+		8DEE15A02744D82E00708391 /* Player+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+Extensions.swift"; sourceTree = "<group>"; };
+		8DEE15B12744DCE800708391 /* shared.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = shared.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4620872746BE6200698E00 /* shared.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +97,10 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				7555FF82242A565900829871 /* ContentView.swift */,
+				8DEE158E2744D82E00708391 /* Assets.xcassets */,
+				8DEE159E2744D82E00708391 /* Helpers */,
+				8DEE15892744D82E00708391 /* Model */,
+				8DEE158F2744D82E00708391 /* Views */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 			);
@@ -72,8 +110,85 @@
 		7555FFB0242A642200829871 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DEE15B12744DCE800708391 /* shared.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DEE15892744D82E00708391 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE158A2744D82E00708391 /* MainScreenState+Extensions.swift */,
+				8DEE158B2744D82E00708391 /* HighScoreStoreModel.swift */,
+				8DEE158C2744D82E00708391 /* Database.swift */,
+				8DEE158D2744D82E00708391 /* MainScreenStoreModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DEE158F2744D82E00708391 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE15902744D82E00708391 /* Game */,
+				8DEE159B2744D82E00708391 /* High Scores */,
+				8DEE159D2744D82E00708391 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8DEE15902744D82E00708391 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE15912744D82E00708391 /* Started */,
+				8DEE15952744D82E00708391 /* NonStarted */,
+				8DEE15992744D82E00708391 /* Finished */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		8DEE15912744D82E00708391 /* Started */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE15942744D82E00708391 /* StartedGameView.swift */,
+				8DEE15922744D82E00708391 /* TeamScoreboardView.swift */,
+				8DEE15932744D82E00708391 /* Ref.swift */,
+			);
+			path = Started;
+			sourceTree = "<group>";
+		};
+		8DEE15952744D82E00708391 /* NonStarted */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE15962744D82E00708391 /* PlayerEditView.swift */,
+				8DEE15972744D82E00708391 /* NonStartedGameView.swift */,
+				8DEE15982744D82E00708391 /* PlayersEditView.swift */,
+			);
+			path = NonStarted;
+			sourceTree = "<group>";
+		};
+		8DEE15992744D82E00708391 /* Finished */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE159A2744D82E00708391 /* FinishedGameView.swift */,
+			);
+			path = Finished;
+			sourceTree = "<group>";
+		};
+		8DEE159B2744D82E00708391 /* High Scores */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE159C2744D82E00708391 /* HighScoresView.swift */,
+			);
+			path = "High Scores";
+			sourceTree = "<group>";
+		};
+		8DEE159E2744D82E00708391 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE159F2744D82E00708391 /* RandomNameGenerator.swift */,
+				8DEE15A02744D82E00708391 /* Player+Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,7 +198,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "iosApp" */;
 			buildPhases = (
-				7555FFB5242A651A00829871 /* ShellScript */,
 				7555FF77242A565900829871 /* Sources */,
 				7555FF78242A565900829871 /* Frameworks */,
 				7555FF79242A565900829871 /* Resources */,
@@ -136,38 +250,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEE15A52744D82E00708391 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7555FFB5242A651A00829871 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7555FF77242A565900829871 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEE15A22744D82E00708391 /* HighScoreStoreModel.swift in Sources */,
+				8DEE15AB2744D82E00708391 /* PlayersEditView.swift in Sources */,
+				8DEE15AE2744D82E00708391 /* ContentView.swift in Sources */,
+				8DEE15A72744D82E00708391 /* Ref.swift in Sources */,
+				8DEE15A12744D82E00708391 /* MainScreenState+Extensions.swift in Sources */,
+				8DEE15AC2744D82E00708391 /* FinishedGameView.swift in Sources */,
+				8DEE15A42744D82E00708391 /* MainScreenStoreModel.swift in Sources */,
+				8DEE15AA2744D82E00708391 /* NonStartedGameView.swift in Sources */,
+				8DEE15AF2744D82E00708391 /* RandomNameGenerator.swift in Sources */,
+				8DEE15A92744D82E00708391 /* PlayerEditView.swift in Sources */,
+				8DEE15B02744D82E00708391 /* Player+Extensions.swift in Sources */,
+				8DEE15A82744D82E00708391 /* StartedGameView.swift in Sources */,
+				8DEE15AD2744D82E00708391 /* HighScoresView.swift in Sources */,
+				8DEE15A62744D82E00708391 /* TeamScoreboardView.swift in Sources */,
+				8DEE15A32744D82E00708391 /* Database.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,8 +405,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				INFOPLIST_FILE = iosApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +416,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
+				PRODUCT_BUNDLE_IDENTIFIER = kontur.kickerchamp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,8 +429,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				INFOPLIST_FILE = iosApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,7 +440,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
+				PRODUCT_BUNDLE_IDENTIFIER = kontur.kickerchamp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

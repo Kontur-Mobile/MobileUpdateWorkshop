@@ -2,9 +2,14 @@ import SwiftUI
 
 @main
 struct iOSApp: App {
-	var body: some Scene {
-		WindowGroup {
-			ContentView()
-		}
-	}
+  @StateObject var mainScreenStoreModel = MainScreenStoreModel()
+  @StateObject var highScoreStoreModel = HighScoreStoreModel()
+
+  var body: some Scene {
+    WindowGroup {
+      ContentView(gameState: mainScreenStoreModel.gameState)
+        .environmentObject(mainScreenStoreModel)
+        .environmentObject(highScoreStoreModel)
+    }
+  }
 }

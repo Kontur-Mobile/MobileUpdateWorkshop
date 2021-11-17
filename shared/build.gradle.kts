@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins {
     kotlin("multiplatform")
@@ -10,15 +11,13 @@ kotlin {
     android()
     jvm("desktop")
 
-    val iosTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget = when {
-        System.getenv("SDK_NAME")?.startsWith("iphoneos") == true -> ::iosArm64
-        else -> ::iosX64
-    }
+    val xcf = XCFramework()
 
-    iosTarget("ios") {
+    ios {
         binaries {
             framework {
                 baseName = "shared"
+                xcf.add(this)
             }
         }
     }
@@ -28,7 +27,7 @@ kotlin {
             dependencies {
                 implementation(libs.sqlDelightRuntime)
                 implementation(libs.sqlDelightCoroutinesExtensions)
-                implementation(libs.kotlinCoroutines)
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-native-mt")
                 implementation(libs.koin)
             }
         }

@@ -15,11 +15,19 @@ class MainScreenStore(private val database: Database) {
     val state = _state.asStateFlow()
 
     fun onIncrementRed() {
-        onIncrementScore(RedTeam)
+        onIncrementScore(RedTeam, 1)
     }
 
     fun onIncrementBlue() {
-        onIncrementScore(BlueTeam)
+        onIncrementScore(BlueTeam, 1)
+    }
+
+    fun onDecrementRed() {
+        onIncrementScore(RedTeam, -1)
+    }
+
+    fun onDecrementBlue() {
+        onIncrementScore(BlueTeam, -1)
     }
 
     fun onRevengeClicked() {
@@ -63,12 +71,12 @@ class MainScreenStore(private val database: Database) {
         _state.value = state.value.copy(dialogState = null)
     }
 
-    private fun onIncrementScore(team: Team) {
+    private fun onIncrementScore(team: Team, byValue: Int) {
         val gameState = state.value.gameState
         if (gameState is GameState.Started) {
             val newGameState = when (team) {
-                is BlueTeam -> gameState.copy(blueScore = gameState.blueScore + 1)
-                is RedTeam -> gameState.copy(redScore = gameState.redScore + 1)
+                is BlueTeam -> gameState.copy(blueScore = gameState.blueScore + byValue)
+                is RedTeam -> gameState.copy(redScore = gameState.redScore + byValue)
             }
             _state.value = state.value.copy(gameState = newGameState)
             checkGameEnded(newGameState)
@@ -135,6 +143,6 @@ class MainScreenStore(private val database: Database) {
     }
 
     companion object {
-        private const val WIN_SCORE = 10
+        const val WIN_SCORE = 10
     }
 }
