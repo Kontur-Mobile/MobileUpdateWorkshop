@@ -3,7 +3,6 @@ package ru.kontur.kickerchamp.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import ru.kontur.kickerchamp.android.main.MainScreen
 import ru.kontur.kickerchamp.android.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
@@ -12,9 +11,9 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             AppTheme {
-                MainScreen(
+                NavGraph(
                     (application as App).mainScreenStore,
-                    onHighScoresClick = {}
+                    (application as App).highScoreStore
                 )
             }
         }
