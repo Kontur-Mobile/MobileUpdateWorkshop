@@ -1,10 +1,16 @@
 package ru.kontur.kickerchamp
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 import ru.kontur.kickerchamp.db.Database
 
 class MainScreenStore(private val database: Database) {
+    private val coroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
+
     private val _state = MutableStateFlow(MainScreenState())
     val state = _state.asStateFlow()
 
@@ -93,25 +99,27 @@ class MainScreenStore(private val database: Database) {
         winnerPlayers: List<Player>,
         goalsDiff: Int
     ) {
-        // TODO: Not implemented
-        val playerScores = emptyList<PlayerScore>()
-        val newPlayerScores = state.value.players.map { player ->
-            val score = playerScores.find { it.name == player.name }
-            val previousWins = score?.wins ?: 0
-            val previousGoalsDiff = score?.goalsDiff ?: 0
-            PlayerScore(
-                name = player.name,
-                wins = if (player in winnerPlayers) {
-                    previousWins + 1
-                } else {
-                    previousWins
-                },
-                goalsDiff = if (player in winnerPlayers) {
-                    previousGoalsDiff + goalsDiff
-                } else {
-                    previousGoalsDiff - goalsDiff
-                }
-            )
+        coroutineScope.launch {
+            val playerScores = database.getPlayerScores()
+            val newPlayerScores = state.value.players.map { player ->
+                val score = playerScores.find { it.name == player.name }
+                val previousWins = score?.wins ?: 0
+                val previousGoalsDiff = score?.goalsDiff ?: 0
+                PlayerScore(
+                    name = player.name,
+                    wins = if (player in winnerPlayers) {
+                        previousWins + 1
+                    } else {
+                        previousWins
+                    },
+                    goalsDiff = if (player in winnerPlayers) {
+                        previousGoalsDiff + goalsDiff
+                    } else {
+                        previousGoalsDiff - goalsDiff
+                    }
+                )
+            }
+            database.savePlayerScores(newPlayerScores)
         }
     }
 
