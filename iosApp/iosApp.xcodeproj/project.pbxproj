@@ -16,7 +16,6 @@
 		8DEE15A42744D82E00708391 /* MainScreenStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE158D2744D82E00708391 /* MainScreenStoreModel.swift */; };
 		8DEE15A52744D82E00708391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE158E2744D82E00708391 /* Assets.xcassets */; };
 		8DEE15A62744D82E00708391 /* TeamScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15922744D82E00708391 /* TeamScoreboardView.swift */; };
-		8DEE15A72744D82E00708391 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15932744D82E00708391 /* Ref.swift */; };
 		8DEE15A82744D82E00708391 /* StartedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15942744D82E00708391 /* StartedGameView.swift */; };
 		8DEE15A92744D82E00708391 /* PlayerEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15962744D82E00708391 /* PlayerEditView.swift */; };
 		8DEE15AA2744D82E00708391 /* NonStartedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE15972744D82E00708391 /* NonStartedGameView.swift */; };
@@ -52,7 +51,6 @@
 		8DEE158D2744D82E00708391 /* MainScreenStoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenStoreModel.swift; sourceTree = "<group>"; };
 		8DEE158E2744D82E00708391 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DEE15922744D82E00708391 /* TeamScoreboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamScoreboardView.swift; sourceTree = "<group>"; };
-		8DEE15932744D82E00708391 /* Ref.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		8DEE15942744D82E00708391 /* StartedGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartedGameView.swift; sourceTree = "<group>"; };
 		8DEE15962744D82E00708391 /* PlayerEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerEditView.swift; sourceTree = "<group>"; };
 		8DEE15972744D82E00708391 /* NonStartedGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonStartedGameView.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 			children = (
 				8DEE15942744D82E00708391 /* StartedGameView.swift */,
 				8DEE15922744D82E00708391 /* TeamScoreboardView.swift */,
-				8DEE15932744D82E00708391 /* Ref.swift */,
 			);
 			path = Started;
 			sourceTree = "<group>";
@@ -264,7 +261,6 @@
 				8DEE15A22744D82E00708391 /* HighScoreStoreModel.swift in Sources */,
 				8DEE15AB2744D82E00708391 /* PlayersEditView.swift in Sources */,
 				8DEE15AE2744D82E00708391 /* ContentView.swift in Sources */,
-				8DEE15A72744D82E00708391 /* Ref.swift in Sources */,
 				8DEE15A12744D82E00708391 /* MainScreenState+Extensions.swift in Sources */,
 				8DEE15AC2744D82E00708391 /* FinishedGameView.swift in Sources */,
 				8DEE15A42744D82E00708391 /* MainScreenStoreModel.swift in Sources */,
