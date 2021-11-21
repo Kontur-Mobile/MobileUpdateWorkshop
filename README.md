@@ -1,6 +1,19 @@
 # Mobile Update
 
+Начало воркшопа в ветке [step1/android-start](https://github.com/konturmobile/MobileUpdateWorkshop/tree/step1/android-start)
+Финиш в ветке [main](https://github.com/konturmobile/MobileUpdateWorkshop/tree/main)
+
+## Android
+
+Проект, работающий на Jetpack Compose
+
+## Desktop
+
+Проект, поддерживающий основние Desktop OS.
+
 ## SwiftUI
+
+Проект, работающий на iPadOS, iOS.
 
 ### Как собрать фреймворк
 
@@ -25,6 +38,6 @@
 - [objc.io](https://objc.io) - книга Thinking in SwiftUI, видео.
 - [pointfree.co](https://pointfree.co) - целый UDF фреймворк на Combine
 
-twitter: [@agapov_one](https://twitter.com/agapov_one)
+SwiftUI Author Twitter: [@agapov_one](https://twitter.com/agapov_one)
 
 [Контур](https://kontur.ru)
