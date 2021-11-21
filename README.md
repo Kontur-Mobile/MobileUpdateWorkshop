@@ -1,6 +1,7 @@
 # Mobile Update
 
 Начало воркшопа в ветке [step1/android-start](https://github.com/konturmobile/MobileUpdateWorkshop/tree/step1/android-start)
+
 Финиш в ветке [main](https://github.com/konturmobile/MobileUpdateWorkshop/tree/main)
 
 ## Android
@@ -9,7 +10,7 @@
 
 ## Desktop
 
-Проект, поддерживающий основние Desktop OS.
+Проект, поддерживающий основные Desktop OS.
 
 ## SwiftUI
 
