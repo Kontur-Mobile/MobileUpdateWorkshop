@@ -6,11 +6,16 @@
 
 ## Android
 
-Проект, работающий на Jetpack Compose
+[Презентация](./JetpackCompose.pdf)
+
+Проект написан с использованием Jetpack Compose и Kotlin Multiplatform.
+Стек технологий: Kotlin Coroutines, Koin, SQLDelight.
 
 ## Desktop
 
-Проект, поддерживающий основные Desktop OS.
+[Презентация](./KotlinForEverything.pdf)
+
+Проект для Desktop переиспользует всю логику и верстку из приложения под Android.
 
 ## SwiftUI
 
